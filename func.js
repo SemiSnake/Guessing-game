@@ -25,10 +25,17 @@ function start()
     var randomNumber = (Math.floor(Math.random() * 100) + 1);
     var guessedNumber;
 
+    //Thermostat value
+    const thermostatDiv = document.getElementById("thermostatDiv");
+    
+
     function guess() 
     {
         document.getElementById("number").placeholder = "";
         guessedNumber = document.getElementById("number").value;
+        let difference = Math.abs(guessedNumber-randomNumber);
+        console.log(difference);
+        thermostatDiv.style.height = -difference - 100;
         if (attempts > 1 && document.getElementById("number").value != "") 
         {
             document.getElementById("number").value = "";

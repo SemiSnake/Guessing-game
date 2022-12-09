@@ -12,7 +12,8 @@ function start() {
     var guessedNumber;
     randomNumber = (Math.floor(Math.random() * 100) + 1)
     var attempts = 10;
-    function guess() {
+    function guess() 
+    {
         guessedNumber = document.getElementById("number").value;
         if (guessedNumber > randomNumber) {
             attempts--;

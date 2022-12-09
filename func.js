@@ -26,6 +26,7 @@ function start() {
             //document.getElementById("Error").innerHTML = "Tallet ditt var for lavt! Du har " + attempts + " forsøk igjen!";
         }
         else {
+            console.log("yay du klarte det");
             //document.getElementById("Error").innerHTML = "Du gjettet riktig! Bra jobba!!!!!!!!!!";
         }
         console.log(guessedNumber);

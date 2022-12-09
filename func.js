@@ -60,5 +60,9 @@ function start() {
 
     function newGame() {
         randomNumber = (Math.floor(Math.random() * 100) + 1);
+        attempts = 10;
+        hintAmount = 3;
+        document.getElementById('modalFail').style.display='none';
+        document.getElementById('modalWin').style.display='none';
     }
 }

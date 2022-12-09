@@ -9,8 +9,26 @@
         <link rel="stylesheet" href="style.css">
         <script src ="func.js"></script>
     </head>
-    <body>
-        <input type="number" id ="number"></input>
-        <button id ="button1">Gjett</button>
+    <body class ="w3-display-container">
+        <div id = "modalWin" class ="w3-modal" style ="display: block;">
+            <img src="Medier/confetti-40.webp" class="w3-display-middle gif"></img>
+            <div class ="w3-modal-content">
+                <div class ="w3-container">
+                    <span onclick="document.getElementById('modalWin').style.display='none'"class="w3-button w3-display-topright">&times;</span>
+                    <p>Hello</p>
+                </div>
+            </div>
+        </div>
+    
+        <div id ="w3-container w3-display-middle">
+            <div id ="w3-row">
+                <input type="number" id ="number" class ="w3-col s12 m12 l12 w3-container w3-button"></input>
+            </div>
+
+            <div id ="w3-row">
+                <button id ="guessbtn" class ="w3-col s12 m4 l3 w3-container w3-button knapp"><p>Gjett</p></button>
+                <button id ="restartbtn" class ="w3-col s12 m4 l3 w3-container w3-button knapp"><p>Start</p></button>
+            </div>
+        </div>
     </body>
 </html>

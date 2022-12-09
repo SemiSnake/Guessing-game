@@ -32,7 +32,7 @@ function start() {
         console.log(randomNumber);
     }
 
-    function newGame() 
+    function newGame()
     {
         randomNumber = (Math.floor(Math.random() * 100) + 1);
     }

@@ -13,11 +13,11 @@
         <!-- Win skjerm -->
         <div id = "modalWin" class ="w3-modal" style ="display: none;">
             <img src="Medier/confetti-40.webp" class="w3-display-middle gif"></img>
-            <div class ="w3-modal-content w3-green">
+            <div class ="w3-modal-content w3-grey">
                 <div class ="w3-container">
                     <span onclick="document.getElementById('modalWin').style.display='none'"class="w3-button w3-display-topright">&times;</span>
-                    <p id="result1"></p>
-                    <button style="width: 100%;" class="w3-col w3-container w3-button knapp restart">
+                    <img src="Medier/win.png">
+                    <button style="width: 100%;" id="restart1" class="w3-col w3-container w3-button knapp">
                         <p>Restart</p>
                     </button>
                 </div>
@@ -29,8 +29,7 @@
             <div class ="w3-modal-content w3-red">
                 <div class ="w3-container">
                     <span onclick="document.getElementById('modalFail').style.display='none'"class="w3-button w3-display-topright">&times;</span>
-                    <p id="result2"></p>
-                    <button style="width: 100%;" class="w3-col w3-container w3-button knapp restart">
+                    <button style="width: 100%;" id="restart2" class="w3-col w3-container w3-button knapp">
                         <p>Restart</p>
                     </button>
                 </div>
@@ -51,7 +50,7 @@
                 <button id ="hintbtn" style="width: 45%;" class ="w3-col w3-container w3-button knapp w3-right"><p>Hint</p></button>
             </div>
             <div class ="w3-row">
-                <button style="width: 100%;" class ="w3-col w3-container w3-button knapp restart"><p>Restart</p></button>
+                <button style="width: 100%;" id="restart3" class ="w3-col w3-container w3-button knapp"><p>Restart</p></button>
             </div>
         </div>
     </body>

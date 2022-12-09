@@ -4,12 +4,17 @@ function start()
     //Buttons
     const guessButton = document.getElementById("guessbtn");
     guessButton.onclick = guess;
-    const startButton = document.getElementsByClassName("restartbtn");
-    startButton.onclick = newGame;
+
+    const startButton1 = document.getElementById("restart1");
+    startButton1.onclick = newGame;
+    const startButton2 = document.getElementById("restart2");
+    startButton2.onclick = newGame;
+    const startButton3 = document.getElementById("restart3");
+    startButton3.onclick = newGame;
+    
     const hintButton = document.getElementById("hintbtn");
     hintButton.onclick = showHint;
 
-    document.getElementsByClassName("restart").onclick = newGame;
     //Attempts
     var attempts = 10;
     var attemptsTxt = document.getElementById("attemptsTxt");
@@ -46,7 +51,6 @@ function start()
             else {
                 attempts--;
                 attemptsTxt.innerHTML = attempts;
-                document.getElementById("result1").innerHTML = "Du gjettet riktig! Bra jobba!!!!!!!!!!";
                 document.getElementById('modalWin').style.display='block';
             }
 
@@ -63,7 +67,6 @@ function start()
         {
             attempts--;
             attemptsTxt.innerHTML = attempts;
-            document.getElementById("result2").innerHTML = "Game over!";
             document.getElementById('modalFail').style.display='block';
         }
     }
@@ -90,7 +93,9 @@ function start()
     {
         randomNumber = (Math.floor(Math.random() * 100) + 1);
         attempts = 10;
+        attemptsTxt.innerHTML = attempts;
         hintAmount = 3;
+        hintTxt.innerHTML = hintAmount;
         document.getElementById('modalFail').style.display='none';
         document.getElementById('modalWin').style.display='none';
     }

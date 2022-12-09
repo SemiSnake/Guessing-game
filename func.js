@@ -3,7 +3,7 @@ function start() {
     //Buttons
     const guessButton = document.getElementById("guessbtn");
     guessButton.onclick = guess;
-    const startButton = document.getElementById("restartbtn");
+    const startButton = document.getElementsByClassName("restartbtn");
     startButton.onclick = newGame;
     const hintButton = document.getElementById("hintbtn");
     hintButton.onclick = showHint;

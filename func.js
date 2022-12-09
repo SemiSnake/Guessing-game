@@ -24,6 +24,7 @@ function start()
     //Numbers
     var randomNumber = (Math.floor(Math.random() * 100) + 1);
     var guessedNumber;
+    var hasGuessedNumber = 0;
 
     //Thermostat value
     const thermostatDiv = document.getElementById("thermostatDiv");
@@ -58,6 +59,8 @@ function start()
 
             console.log(guessedNumber);
             console.log(randomNumber);
+
+            hasGuessedNumber = 1;
         }
         else if(document.getElementById("number").value == "")
         {
@@ -74,7 +77,7 @@ function start()
 
     function showHint() 
     {
-        if(document.getElementById("number").value == "") {
+        if(hasGuessedNumber == 1) {
             if (hintAmount > 0) {
                 document.getElementById("number").placeholder = hint;
                 hintAmount--;

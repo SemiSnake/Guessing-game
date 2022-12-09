@@ -36,6 +36,7 @@ function start() {
             }
             else {
                 document.getElementById("result").innerHTML = "Du gjettet riktig! Bra jobba!!!!!!!!!!";
+                document.getElementById('modalWin').style.display='block';
             }
 
             console.log(guessedNumber);
@@ -43,7 +44,7 @@ function start() {
         }
         else {
             document.getElementById("result").innerHTML = "Game over!";
-            document.getElementById('modal').style.display='block';
+            document.getElementById('modalFail').style.display='block';
         }
     }
 

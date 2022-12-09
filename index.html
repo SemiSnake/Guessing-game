@@ -11,35 +11,44 @@
     </head>
     <body class ="w3-display-container">
         <!-- Win skjerm -->
-        <div id = "modalWin" class ="w3-modal" style ="display: block;">
+        <div id = "modalWin" class ="w3-modal" style ="display: none;">
             <img src="Medier/confetti-40.webp" class="w3-display-middle gif"></img>
             <div class ="w3-modal-content w3-green">
                 <div class ="w3-container">
                     <span onclick="document.getElementById('modalWin').style.display='none'"class="w3-button w3-display-topright">&times;</span>
-                    <p>Hello</p>
+                    <p id="result1"></p>
+                    <button style="width: 100%;" class="w3-col w3-container w3-button knapp restart">
+                        <p>Restart</p>
+                    </button>
                 </div>
             </div>
         </div>
 
         <!-- Fail skjerm -->
         <div id = "modalFail" class ="w3-modal" style ="display: none;">
-            <img src="Medier/confetti-40.webp" class="w3-display-middle gif"></img>
-            <div class ="w3-modal-content">
+            <div class ="w3-modal-content w3-red">
                 <div class ="w3-container">
                     <span onclick="document.getElementById('modalFail').style.display='none'"class="w3-button w3-display-topright">&times;</span>
-                    <p>Hello</p>
+                    <p id="result2"></p>
+                    <button style="width: 100%;" class="w3-col w3-container w3-button knapp restart">
+                        <p>Restart</p>
+                    </button>
                 </div>
             </div>
         </div>
         
         <!-- Spill skjerm -->
-        <div class ="w3-container w3-display-middle">
+        <div class ="w3-container w3-display-middle" style="width: 40%;">
             <div class ="w3-row">
-                <input type="number" id ="number" class ="w3-col s12 m12 l12 w3-container w3-button"></input>
+                <p>Attempts: <span id="attemptsTxt"></span></p>
+                <p>Hint: <span id="hint"></span></p>
             </div>
             <div class ="w3-row">
-                <button id ="guessbtn" style="width: 50%;" class ="w3-col w3-container w3-button knapp"><p>Gjett</p></button>
-                <button id ="hintbtn" style="width: 50%;" class ="w3-col w3-container w3-button knapp"><p>Hint</p></button>
+                <input type="number" id ="number" style="padding: 10px;" class ="w3-col s12 m12 l12 w3-container w3-input"></input>
+            </div>
+            <div class ="w3-row">
+                <button id ="guessbtn" style="width: 45%;" class ="w3-half w3-col w3-container w3-button knapp"><p>Gjett</p></button>
+                <button id ="hintbtn" style="width: 45%;" class ="w3-col w3-container w3-button knapp w3-right"><p>Hint</p></button>
             </div>
             <div class ="w3-row">
                 <button style="width: 100%;" class ="w3-col w3-container w3-button knapp restart"><p>Restart</p></button>

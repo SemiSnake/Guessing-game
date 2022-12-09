@@ -1,6 +1,5 @@
 window.onload = start
-function start()
-{
+function start() {
     var x = 1;
     var array = [0, 1, 2, 3, 4, 5];
     for (i in array) {
@@ -11,19 +10,25 @@ function start()
     guessButton.onclick = guess;
     var randomNumber;
     var guessedNumber;
-    function guess() 
-    {
+    var attempts = 10;
+    function guess() {
         guessedNumber = document.getElementById("number").value;
-        if(guessedNumber > randomNumber)
-        {
-            
+        if (guessedNumber > randomNumber) {
+            attempts--;
+            document.getElementById("Error").innerHTML = "Tallet ditt var for høyt! Du har " + attempts + " forsøk igjen!";
+        }
+        else if (guessedNumber < randomNumber) {
+            attempts--
+            document.getElementById("Error").innerHTML = "Tallet ditt var for lavt! Du har " + attempts + " forsøk igjen!";
+        }
+        else {
+            document.getElementById("Error").innerHTML = "Du gjettet riktig! Bra jobba!!!!!!!!!!";
         }
         console.log(guessedNumber);
         console.log(randomNumber);
     }
 
-    function newGame()
-    {
+    function newGame() {
         randomNumber = (Math.floor(Math.random() * 100) + 1);
     }
 }

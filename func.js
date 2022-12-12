@@ -32,7 +32,7 @@ function start()
     var hasGuessedNumber = 0;
 
     //Thermostat value
-    const thermostatDiv = document.getElementById("thermostatDiv");
+    /* const thermostatDiv = document.getElementById("thermostatDiv"); */
     
 
     function guess() 
@@ -41,7 +41,7 @@ function start()
         guessedNumber = document.getElementById("number").value;
         let difference = Math.abs(guessedNumber-randomNumber);
         console.log(difference);
-        thermostatDiv.style.height = -difference - 100;
+        //thermostatDiv.style.height = -difference - 100;
         if (attempts > 1 && document.getElementById("number").value != "") 
         {
             document.getElementById("number").value = "";
@@ -98,12 +98,6 @@ function start()
 
     function newGame() 
     {
-        randomNumber = (Math.floor(Math.random() * 100) + 1);
-        attempts = 10;
-        attemptsTxt.innerHTML = attempts;
-        hintAmount = 3;
-        hintTxt.innerHTML = hintAmount;
-        document.getElementById('modalFail').style.display='none';
-        document.getElementById('modalWin').style.display='none';
+        location.reload();
     }
 }
